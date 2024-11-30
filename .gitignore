@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+public/build/
+
+# Logs and cache
+*.log
+.cache/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+
+# OS-specific files
+.DS_Store
+
+# Testing
+coverage/
+
+# Environment files (if you want to keep them out of version control)
+.env
+.env.*
