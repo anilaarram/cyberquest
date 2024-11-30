@@ -1,0 +1,128 @@
+.challenge-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .news-feed {
+    background-color: #222; /* Dark background for consistency */
+    padding: 20px; /* Spacing inside the container */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  }
+  
+  .news-feed h4 {
+    color: #ff4d4d; /* Red color for the heading */
+    margin-bottom: 15px; /* Space between heading and content */
+    font-size: 18px; /* Slightly larger font for emphasis */
+  }
+  
+  .news-feed p {
+    color: #ddd; /* Softer white color for better readability */
+    line-height: 1.5; /* Improved line spacing for readability */
+    font-size: 16px; /* Adequate font size for the text */
+    margin: 0; /* Remove default paragraph margin */
+  }
+  
+  .news-feed:hover {
+    background-color: #333; /* Slightly lighter background on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  }
+  
+  .trending-challenges {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .trending-challenges {
+    background-color: #222; /* Darker background */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  }
+  
+  .trending-challenges h4 {
+    color: #ff4d4d; /* Red color for the heading */
+    margin-bottom: 15px; /* Space between heading and list */
+    font-size: 18px;
+  }
+  
+  .trending-challenges ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .trending-challenges ul li {
+    background: #333; /* Slightly lighter background for each item */
+    color: #fff; /* White text color */
+    padding: 10px; /* Spacing inside each list item */
+    margin-bottom: 10px; /* Space between list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .trending-challenges ul li:hover {
+    background-color: #444; /* Lighter background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #e03e3e;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .cta-btn:active {
+    transform: translateY(0);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: #cc3535;
+  }
+  
+
+  .footer {
+    background-color: #1a1a1a; /* Dark background for the footer */
+    color: #fff; /* White text */
+    text-align: center; /* Center-align text */
+    padding: 20px 0; /* Vertical padding */
+    margin-top: 40px; /* Space above the footer */
+    border-top: 1px solid #333; /* Subtle top border */
+  }
+  
+  .footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Small font size for copyright text */
+  }
+  
+  .footer-links {
+    margin-top: 10px; /* Space between text and links */
+  }
+  
+  .footer-links a {
+    color: #ff4d4d; /* Use the theme's red color */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 10px; /* Space between links */
+    font-size: 14px; /* Match font size */
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #e03e3e; /* Slightly darker red for hover effect */
+  }

@@ -1,0 +1,27 @@
+.code-editor-container {
+  height: calc(100vh - 50px); /* Full height minus header */
+  display: flex;
+}
+
+.code-editor-sidebar,
+.output-container {
+  height: 100%; /* Ensure equal height with Split.js */
+  display: flex;
+  flex-direction: column;
+}
+
+.output-container {
+  background-color: #1e1e2e;
+  border-radius: 8px;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+/* Style the Splitter (Gutter) */
+.gutter {
+  background-color: #444; /* Dark grey for splitter */
+  cursor: col-resize; /* Indicate resizable */
+  width: 10px; /* Splitter width */
+  height: 100%; /* Full height */
+  border-radius: 5px;
+}

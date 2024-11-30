@@ -1,0 +1,26 @@
+.language-selector-container {
+    margin-left: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .language-selector-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .language-selector-dropdown {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .language-selector-dropdown option {
+    font-size: 14px;
+  }
+  

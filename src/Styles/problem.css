@@ -1,0 +1,99 @@
+.problem-details-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two-thirds for details, one-third for Try More */
+    gap: 20px; /* Space between columns */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .details-section {
+    background-color: #222; /* Dark background for the sections */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #ff4d4d; /* Red border for highlighting */
+    margin-bottom: 20px; /* Add spacing between blocks */
+  }
+  
+  .details-section h3 {
+    color: #ff4d4d; /* Highlighted heading in red */
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .details-section p {
+    line-height: 1.6; /* Line height for better readability */
+    font-size: 16px;
+  }
+  
+  .try-more {
+    background-color: #222; /* Dark background for the Try More section */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #ff4d4d; /* Red border for highlighting */
+  }
+  
+  .try-more h3 {
+    color: #ff4d4d; /* Highlighted heading in red */
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .try-more ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .try-more ul li {
+    background: #333; /* Slightly lighter background for items */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between items */
+    border-radius: 5px; /* Rounded corners for items */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor for interaction */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .try-more ul li:hover {
+    background-color: #444; /* Slightly lighter hover effect */
+  }
+  
+  .solve-button-container {
+    text-align: center;
+    margin-top: 20px; /* Space above the button */
+  }
+  
+  .cta-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #e03e3e;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .problem-details-heading {
+    text-align: center;
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .problem-details-heading h2 {
+    font-size: 28px;
+    color: #ff4d4d; /* Matches the theme */
+    text-transform: uppercase; /* Makes the text uppercase */
+    font-weight: bold;
+  }
+  
+  

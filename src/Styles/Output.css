@@ -1,0 +1,55 @@
+.output-container {
+    background-color: #1e1e2e; /* Match code editor's background */
+    border-radius: 8px; /* Consistent styling */
+    overflow-y: auto; /* Allow scroll for long content */
+    padding: 8px; /* Inner spacing */
+    flex: 1; /* Ensure both take equal space */
+  display: flex;
+  flex-direction: column; /* Allow stacking of child elements */
+  height: 100%;
+  }
+  
+  .output-label {
+    margin-bottom: 8px; /* Matches Chakra's mb={2} */
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .run-button {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 16px; /* Matches Chakra's mb={4} */
+    font-size: 16px;
+    border: 1px solid #28a745;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #28a745;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .run-button:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .run-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  .output-box {
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    overflow-y: auto;
+    background-color: #2d2d3a; /* Adjust this shade as needed */
+    color: #ffffff; /* Ensure text contrast */
+  }
+  
+  .output-box.error {
+    color: #e74c3c; /* Matches Chakra's red.400 */
+    border-color: #c0392b; /* Matches Chakra's red.500 */
+  }
+  
