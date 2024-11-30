@@ -6,7 +6,7 @@ import Cyberque from "./Pages/cyberque.jsx";
 import Signup from "./Pages/Signup.jsx";
 import Dashboard from "./Pages/Dashboard.jsx";
 import OTP from "./Pages/Otp.jsx";
-import ProblemDetails from "./Pages/Problem.jsx";
+import ProblemDetails from "./Pages/problem.jsx";
 import Profile from "./Pages/profile.jsx";
 import Admin from "./Pages/Admin.jsx";
 function App() {
