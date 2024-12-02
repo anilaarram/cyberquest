@@ -18,7 +18,7 @@ const Login = () => {
         "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/token",
         {
           method: "POST",
-          mode: 'no-cors',
+        //  mode: 'no-cors',
           headers: {
             "Content-Type": "application/json",
           },
