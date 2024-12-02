@@ -1,8 +1,75 @@
-import React from "react";
-import "../Styles/cyberque.css"; // Assuming this file contains your theme styles
-import "../Styles/problem.css"; // Create a new CSS file for specific styles
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import "../Styles/cyberque.css";
+import "../Styles/problem.css";
 
 const ProblemDetails = () => {
+  const [problem, setProblem] = useState({});
+  const [error, setError] = useState("");
+  const { problemTitle } = useParams(); // Extract problemTitle from URL
+  const navigate = useNavigate();
+
+  const getAccessToken = async (username, password) => {
+    try {
+      const response = await fetch("http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/token", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.ok) {
+        const accessToken = await response.text();
+        localStorage.setItem("accessToken", accessToken);
+        return accessToken;
+      } else {
+        throw new Error("Failed to fetch access token");
+      }
+    } catch (error) {
+      console.error("Error fetching token:", error);
+      throw error;
+    }
+  };
+
+  const fetchProblemDetails = async () => {
+    try {
+      if (!problemTitle) {
+        alert("Problem title not found. Returning to dashboard.");
+        navigate("/dashboard");
+        return;
+      }
+
+      const token = await getAccessToken("admin", "password123");
+
+      const response = await fetch(
+        `http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/question/getquestion/${encodeURIComponent(problemTitle)}`, // Send problemTitle in path
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        setProblem(data);
+      } else {
+        const errorMessage = await response.text();
+        throw new Error(errorMessage || "Failed to fetch problem details");
+      }
+    } catch (error) {
+      console.error("Error fetching problem details:", error);
+      setError(error.message);
+    }
+  };
+
+  useEffect(() => {
+    fetchProblemDetails();
+  }, []);
+
   return (
     <div>
       {/* Header Section */}
@@ -22,10 +89,85 @@ const ProblemDetails = () => {
           <span className="animated-logo">CyberQuest</span>
         </div>
       </header>
+
+      {/* Problem Details Section */}
+      <div className="problem-details-heading">
+        <h2>Problem Details</h2>
+      </div>
+      <div className="problem-details-container">
+        <div>
+          {error ? (
+            <p style={{ color: "red" }}>{error}</p>
+          ) : (
+            <>
+              <div className="details-section">
+                <h3>Problem Description</h3>
+                <p>{problem.description || "Loading..."}</p>
+              </div>
+              <div className="details-section">
+                <h3>Input Details</h3>
+                <p>{problem.testCase || "Loading..."}</p>
+              </div>
+              <div className="details-section">
+                <h3>Expected Output</h3>
+                <p>{problem.expectedOutput || "Loading..."}</p>
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* Try More Section */}
+        <div className="try-more">
+          <h3>Try More</h3>
+          <ul>
+            <li>Problem 1: Determine if a number is even or odd.</li>
+            <li>Problem 2: Calculate the factorial of a number.</li>
+            <li>Problem 3: Find the greatest common divisor (GCD) of two numbers.</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Solve Now Button */}
+      <div className="solve-button-container">
+        <button className="cta-btn" onClick={() => navigate("/codeeditor")}>
+          Solve Now
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default ProblemDetails;
+
+
+/*import React from "react";
+import "../Styles/cyberque.css"; // Assuming this file contains your theme styles
+import "../Styles/problem.css"; // Create a new CSS file for specific styles
+
+const ProblemDetails = () => {
+  return (
+    <div>
+      {/* Header Section }
+      <header>
+        <div className="logo">
+          <svg
+            className="network-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 96 960 960"
+            width="24"
+          >
+            <path
+              d="M480 856q-88 0-149-61t-61-149q0-88 61-149t149-61q88 0 149 61t61 149q0 88-61 149t-149 61Zm0-60q70 0 120-49.5T650 626q0-70-50-120t-120-50q-70 0-120 50T310 626q0 70 50 119.5T480 796ZM176 976V758q-53-57-84.5-131T60 476q0-161 112.5-273.5T446 90q161 0 273.5 112.5T832 476q0 73-31.5 147T716 758v218H176Zm60-60h420V736l11-11q45-45 72.5-108.5T768 476q0-132-91-223t-223-91q-132 0-223 91t-91 223q0 64 27.5 127.5T299 725l11 11v180Zm210-320q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-120Zm0 402Z"
+            />
+          </svg>
+          <span className="animated-logo">CyberQuest</span>
+        </div>
+      </header>
 <div className="problem-details-heading">
     <h2>Problem Details</h2>
   </div>
-      {/* Main Content */}
+      {/* Main Content }
       <div className="problem-details-container">
   <div>
     <div className="details-section">
@@ -58,7 +200,7 @@ const ProblemDetails = () => {
   </div>
 </div>
 
-{/* Solve Now Button */}
+{/* Solve Now Button }
 <div className="solve-button-container">
   <button className="cta-btn" onClick={() => window.location.href = "/codeeditor"}>
     Solve Now
@@ -69,4 +211,4 @@ const ProblemDetails = () => {
   );
 };
 
-export default ProblemDetails;
+export default ProblemDetails;*/
