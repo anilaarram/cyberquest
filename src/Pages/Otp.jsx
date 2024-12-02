@@ -6,12 +6,12 @@ const OTP = () => {
   const [otp, setOtp] = useState(""); // State to store the entered OTP
   const navigate = useNavigate();
 
-  const apiOTPValidateURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/otp/validate"; // Replace with OTP validation API URL
+  const apiOTPValidateURL = "https://cyberquest-550003209148.us-central1.run.app/api/otp/validate"; // Replace with OTP validation API URL
 
   const getAccessToken = async (username, password) => {
     try {
       const response = await fetch(
-        "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/token",
+        "https://cyberquest-550003209148.us-central1.run.app/api/auth/token",
         {
           method: "POST",
           headers: {
@@ -180,7 +180,7 @@ const OTP = () => {
   const [otp, setOtp] = useState(""); // State to store the entered OTP
   const navigate = useNavigate();
 
-  const apiOTPValidateURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/otp/validate"; // Replace with OTP validation API URL
+  const apiOTPValidateURL = "https://cyberquest-550003209148.us-central1.run.app/api/otp/validate"; // Replace with OTP validation API URL
 
   const handleOTPChange = (e) => {
     setOtp(e.target.value); // Update OTP state as the user types

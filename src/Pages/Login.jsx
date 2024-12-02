@@ -9,13 +9,13 @@ const Login = () => {
   });
   const navigate = useNavigate();
 
-  const apiLoginURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/login"; // Replace with Login API URL
-  const apiOTPURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/otp/generate"; // Replace with OTP API URL
+  const apiLoginURL = "https://cyberquest-550003209148.us-central1.run.app/api/auth/login"; // Replace with Login API URL
+  const apiOTPURL = "https://cyberquest-550003209148.us-central1.run.app/api/otp/generate"; // Replace with OTP API URL
 
   const getAccessToken = async (username, password) => {
     try {
       const response = await fetch(
-        "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/token",
+        "https://cyberquest-550003209148.us-central1.run.app/api/auth/token",
         {
           method: "POST",
         //  mode: 'no-cors',
@@ -272,8 +272,8 @@ const Login = () => {
   });
   const navigate = useNavigate();
 
-  const apiLoginURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/login"; // Replace with Login API URL
-  const apiOTPURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/otp/generate"; // Replace with OTP API URL
+  const apiLoginURL = "https://cyberquest-550003209148.us-central1.run.app/api/auth/login"; // Replace with Login API URL
+  const apiOTPURL = "https://cyberquest-550003209148.us-central1.run.app/api/otp/generate"; // Replace with OTP API URL
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -480,8 +480,8 @@ const Login = () => {
   });
   const navigate = useNavigate();
 
-  const apiLoginURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/login"; // Replace with Login API URL
-  const apiOTPURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/otp/generate"; // Replace with OTP API URL
+  const apiLoginURL = "https://cyberquest-550003209148.us-central1.run.app/api/auth/login"; // Replace with Login API URL
+  const apiOTPURL = "https://cyberquest-550003209148.us-central1.run.app/api/otp/generate"; // Replace with OTP API URL
 
   // Input validation function
   const validateInput = () => {

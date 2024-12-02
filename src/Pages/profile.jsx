@@ -11,7 +11,7 @@ const Profile = () => {
   // Fetch access token
   const getAccessToken = async (username, password) => {
     try {
-      const response = await fetch("http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/token", {
+      const response = await fetch("https://cyberquest-550003209148.us-central1.run.app/api/auth/token", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const Profile = () => {
       }
 
       const response = await fetch(
-        `http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/profile/${encodeURIComponent(email)}`, // API expects email in the path
+        `https://cyberquest-550003209148.us-central1.run.app/api/auth/profile/${encodeURIComponent(email)}`, // API expects email in the path
         {
           method: "GET",
           headers: {
@@ -97,7 +97,7 @@ const Profile = () => {
       };
   
       const response = await fetch(
-        "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/payments/create-subscription-session",
+        "https://cyberquest-550003209148.us-central1.run.app/api/payments/create-subscription-session",
         {
           method: "POST",
           headers: {
@@ -266,7 +266,7 @@ const Profile = () => {
   // Fetch access token
   const getAccessToken = async (username, password) => {
     try {
-      const response = await fetch("http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/token", {
+      const response = await fetch("https://cyberquest-550003209148.us-central1.run.app/api/auth/token", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -305,7 +305,7 @@ const Profile = () => {
       }
 
       const response = await fetch(
-        `http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/profile/${encodeURIComponent(email)}`, // API expects email in the path
+        `https://cyberquest-550003209148.us-central1.run.app/api/auth/profile/${encodeURIComponent(email)}`, // API expects email in the path
         {
           method: "GET",
           headers: {

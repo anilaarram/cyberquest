@@ -11,7 +11,7 @@ const Dashboard = () => {
   // Function to fetch access token
   const getAccessToken = async (username, password) => {
     try {
-      const response = await fetch("http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/token", {
+      const response = await fetch("https://cyberquest-550003209148.us-central1.run.app/api/auth/token", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const Dashboard = () => {
         return;
       }
 
-      const response = await fetch("http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/question/gettitles", {
+      const response = await fetch("https://cyberquest-550003209148.us-central1.run.app/api/question/gettitles", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

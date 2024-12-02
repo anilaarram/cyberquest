@@ -11,7 +11,7 @@ const Signup = () => {
     password: "",
   });
 
-  const apiURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/signup";
+  const apiURL = "https://cyberquest-550003209148.us-central1.run.app/api/auth/signup";
   const navigate = useNavigate(); // Initialize navigate
 
   const handleInputChange = (e) => {
@@ -213,14 +213,14 @@ const Signup = () => {
     password: "",
   });
 
-  const apiURL = "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/signup";
+  const apiURL = "https://cyberquest-550003209148.us-central1.run.app/api/auth/signup";
  
   const navigate = useNavigate(); // Initialize navigate
 
   const getAccessToken = async (username, password) => {
     try {
       const response = await fetch(
-        "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/auth/token",
+        "https://cyberquest-550003209148.us-central1.run.app/api/auth/token",
         {
           method: "POST",
           headers: {

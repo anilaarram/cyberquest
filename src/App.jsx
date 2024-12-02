@@ -6,9 +6,10 @@ import Cyberque from "./Pages/cyberque.jsx";
 import Signup from "./Pages/Signup.jsx";
 import Dashboard from "./Pages/Dashboard.jsx";
 import OTP from "./Pages/Otp.jsx";
-import ProblemDetails from "./Pages/problem.jsx";
+
 import Profile from "./Pages/profile.jsx";
 import Admin from "./Pages/Admin.jsx";
+import ProblemDetails from "./Pages/problem.jsx";
 function App() {
   /*const appStyles = {
     minHeight: "100vh", // Matches Chakra's minH="100vh"
