@@ -6,7 +6,7 @@ import Cyberque from "./Pages/cyberque.jsx";
 import Signup from "./Pages/Signup.jsx";
 import Dashboard from "./Pages/Dashboard.jsx";
 import OTP from "./Pages/Otp.jsx";
-
+import PrivateRoute from "./Pages/PrivateRoute.js";
 import Profile from "./Pages/profile.jsx";
 import Admin from "./Pages/Admin.jsx";
 import ProblemDetails from "./Pages/problem.jsx";
@@ -23,13 +23,13 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Cyberque />} />
-      <Route path="/codeeditor" element={<CodeEditor />} />
+      <Route path="/codeeditor" element={<PrivateRoute><CodeEditor /></PrivateRoute>} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
       <Route path="/OTP" element={<OTP />} />
-      <Route path="/problem/:problemTitle" element={<ProblemDetails />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route path="/problem/:problemTitle" element={<PrivateRoute><ProblemDetails /></PrivateRoute>} />
+      <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
       <Route path="/admin" element={<Admin />} />
     </Routes>
   </BrowserRouter>

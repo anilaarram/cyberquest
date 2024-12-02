@@ -45,7 +45,7 @@ const Output = ({ editorRef, language }) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "http://leetcode-env.eba-p53pkhjj.us-east-1.elasticbeanstalk.com/api/question/1/execute", // Replace with your actual API endpoint
+        "https://github.com/chiranjeevi557/cyberquest/api/question/1/execute", // Replace with your actual API endpoint
         {
           method: "POST",
           headers: {

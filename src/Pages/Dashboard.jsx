@@ -73,6 +73,16 @@ const Dashboard = () => {
     navigate(`/problem/${encodeURIComponent(problemTitle)}`);
   };
 
+  const handleLogout = () => {
+    // Clear session and local storage
+    sessionStorage.clear();
+    localStorage.clear();
+  
+    // Navigate to login page
+    navigate("/login");
+  };
+  
+
   return (
     <div>
       {/* Header Section */}
@@ -95,7 +105,19 @@ const Dashboard = () => {
           <a href="/dashboard">Dashboard</a>
           <a href="/leaderboard">Leaderboard</a>
           <a href="/profile">Profile</a>
-          <a href="/logout">Logout</a>
+          <button
+    className="logout-button"
+    onClick={handleLogout}
+    style={{
+      background: "transparent",
+      border: "none",
+      color: "#ff4d4d",
+      cursor: "pointer",
+    }}
+  >
+    Logout
+  </button>
+
         </nav>
       </header>
 
